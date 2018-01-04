@@ -1,0 +1,94 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+
+# Site 网站
+title: 聪聪的独立博客
+subtitle:  挥舞这本子，做个ccoder
+description: hello，every body!~
+author: 聪聪不匆匆
+language: zh-Hans
+timezone: Asia/Shanghai
+
+# URL 网址
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://chencong-plan.github.io/
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory  目录配置
+source_dir: source  # 源文件夹，这个文件夹用来存放md内容
+public_dir: public  # 公共文件夹
+tag_dir: tags  # 标签文件夹
+archive_dir: archives  # 归档文件夹
+category_dir: categories  # 分类文件夹
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render: README.md
+
+# Writing
+new_post_name: :title.md # 新建文章默认文件名
+default_layout: post  #默认布局
+titlecase: false # Transform title into titlecase
+external_link: true # 在新标签当中打开一个外部链接 默认为true
+filename_case: 0  # 转换文件名 1小写 2 大写 0 默认
+render_drafts: false # 将连接改为与根目录 相对位置
+post_asset_folder: false  # 启动asset文件夹
+relative_link: false   # 显示未来的文章 默认false
+future: true  # 显示未来的文章 默认为false
+highlight:     # 代码块位置
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+  
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+  
+# Category & Tag  分类和标签位的设置
+default_category: uncategorized  # 默认分类
+category_map: categories    # 分类别名
+tag_map: tags       # 标签别名
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: next
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: 
+    github: git@github.com:chencong-plan/ccoder.github.io.git,master
+    coding: git@git.coding.net:chencong3139/chencong3139.git,master
+  branch: master
+
+# feed
+# Dependencies: https://github.com/hexojs/hexo-generator-feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
